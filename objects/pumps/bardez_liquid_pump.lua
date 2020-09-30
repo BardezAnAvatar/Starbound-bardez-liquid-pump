@@ -5,14 +5,14 @@ require "/scripts/vec2.lua"
 function init()
 	isInstance=world.getProperty("ephemeral")
 	self.inputLocation = entity.position()
-	storage.entityId = entity.entityId()
+	storage.entityId = entity.uniqueId()
 	checkInput()
 	animate()
 end
 
 
 function checkInput()
-	storage.currentState = setCurrentOutput() and (not object.isOutputNodeConnected(0) or object.getInputNodeLevel(0))
+	storage.currentState = not object.isOutputNodeConnected(0) or object.getInputNodeLevel(0)
 end
 
 

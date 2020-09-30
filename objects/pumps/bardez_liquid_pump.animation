@@ -1,7 +1,7 @@
 {
   "animatedParts" : {
     "stateTypes" : {
-      "pumpinState" : {
+      "inputState" : {
         "default" : "off",
         "states" : {
           "off" : {
@@ -14,12 +14,12 @@
       }
     },
     "parts" : {
-      "pumpin" : {
+      "inputPump" : {
         "properties" : {
           "centered" : false
         },
         "partStates" : {
-          "pumpinState" : {
+          "inputState" : {
             "off" : {
               "properties" : {
                 "image" : "<partImage>:<color>.off"
