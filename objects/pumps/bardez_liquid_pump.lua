@@ -5,7 +5,7 @@ require "/scripts/vec2.lua"
 function init()
 	isInstance=world.getProperty("ephemeral")
 	self.inputLocation = entity.position()
-	self.entityId = entity.entityId()
+	storage.entityId = entity.entityId()
 	checkInput()
 	animate()
 end
@@ -68,7 +68,7 @@ function pumpLiquid()
 			local spawn = { count=liquidData[2], parameters={}, name=liquidData.config.itemDrop }
 			
 			--check if we have the capacity
-			local capacity = world.containerItemsCanFit(self.entityId, spawn.name) or 0
+			local capacity = world.containerItemsCanFit(storage.entityId, spawn.name) or 0
 			if (capacity > 0) then
 
 				--turn float liquid into items; remainder remains liquid

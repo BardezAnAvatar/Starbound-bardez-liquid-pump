@@ -1,0 +1,11 @@
+{
+  "name" : "Liquid pump converter",
+  "friendlyName" : "Liquid pump converter",
+  "description" : "Takes it in the front and turns it into items",
+  "author" : "Bardez",
+  "version" : "1.00",
+  "link" : null,
+  "steamContentId" : "000000001",
+  "tags" : "pumps",
+  "priority" : 0
+}
