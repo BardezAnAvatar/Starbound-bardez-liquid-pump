@@ -7,7 +7,7 @@
   "lockedSlots": [4],
   "printable" : false,
   "rarity" : "Common",
-  "description" : "Drains liquid in front and pumps it into an item network. ^cyan;Blue - Connect to signal^reset; ^red;Red - connect to Item Network^reset;",
+  "description" : "Drains liquid and pumps it into an item network. ^cyan;Blue - Connect to signal^reset; ^red;Red - connect to Item Network^reset;",
   "shortdescription" : "Liquid Capturing Drain",
   "race" : "generic",
   "health" : 2.5,
@@ -22,11 +22,14 @@
             "anchors" : [ "background" ]
         }
     ],
+	
+	
+  "uiConfig": "/interface/bardez_liquid_pump/gui.config",
 
-  "scripts" : [ "/objects/wired/pumps/bardez_liquid_pump.lua" ],
+  "scripts" : [ "/objects/pumps/bardez_liquid_pump.lua" ],
   "scriptDelta" : 5,
 
-  "animation" : "/objects/wired/pumps/bardez_liquid_pump.animation",
+  "animation" : "/objects/pumps/bardez_liquid_pump.animation",
 
   "animationParts" : {
     "inputPump" : "bardez_liquid_pump.png"
