@@ -3,8 +3,8 @@
   "colonyTags" : ["wired"],
   "objectType": "container",
   "tooltipKind": "container",
-  "slotCount": 4,
-  "lockedSlots": [4],
+  "slotCount": 16,
+  "lockedSlots": [16],
   "printable" : false,
   "rarity" : "Common",
   "description" : "Drains liquid and pumps it into an item network. ^cyan;Blue - Connect to signal^reset; ^red;Red - connect to Item Network^reset;",
@@ -37,5 +37,12 @@
 
   "inputNodes" : [ [0, 0] ],
   "outputNodes" : [ [1, 0] ],
-  "interval" : 5
+  "interval" : 5,
+
+  "frameCooldown" : 5,
+  "openFrameIndex" : 4,
+  "autoCloseCooldown" : 3600,
+
+  "kheAA_inDataNode": 0,
+  "kheAA_outDataNode": 0
 }

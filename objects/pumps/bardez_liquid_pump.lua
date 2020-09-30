@@ -3,11 +3,32 @@ require "/scripts/util.lua"
 require "/scripts/vec2.lua"
 
 function init()
-	isInstance=world.getProperty("ephemeral")
-	self.inputLocation = entity.position()
-	storage.entityId = entity.uniqueId()
+
+	if storage == nil then
+		storage = {}
+	end
+	
+	if storage.init == nil then
+		storage.init = true
+	end
+	
+	storage.position = storage.position or entity.position()
+sb.logInfo("Current position: " .. tostring(storage.position))
+	storage.entityId = entity.id()
+sb.logInfo("Current entityId: " .. tostring(storage.entityId))
+	isInstance = world.getProperty("ephemeral")
 	checkInput()
 	animate()
+	TransferInit()
+end
+
+
+function TransferInit()
+	transferUtil.init()	
+	transferUtil.vars.inContainers={}
+	transferUtil.vars.outContainers={}
+	transferUtil.vars.containerId=nil
+	self.containerPos={0,0}
 end
 
 
@@ -32,6 +53,7 @@ end
 
 
 function outputnodes()
+	transferUtil.loadSelfContainer()
 	object.setOutputNodeLevel(transferUtil.vars.outDataNode,not transferUtil.vars.containerId==nil)
 end
 
@@ -58,15 +80,23 @@ function pumpLiquid()
 	--	Simple array of two values (not an object) returned by various world functions.
 	--	  int liquidId
 	--	  float amount
-	local inputLiquid = world.forceDestroyLiquid(self.inputLocation)
+	local inputLiquid = world.forceDestroyLiquid(storage.position)
+sb.logInfo("inputLiquid: " .. tostring(inputLiquid))
+sb.logInfo("liquid id: " .. tostring(inputLiquid[1]))
+sb.logInfo("liquid count: " .. tostring(inputLiquid[2]))
 
 	if inputLiquid and inputLiquid[2] > 0.0 then
 		local liquidData = root.liquidConfig(inputLiquid[1])
 
 		if liquidData and liquidData.config and liquidData.config.itemDrop then
 
-			local spawn = { count=liquidData[2], parameters={}, name=liquidData.config.itemDrop }
+			local spawn = { name = liquidData.config.itemDrop, count = inputLiquid[2], parameters = {} }
 			
+sb.logInfo("liquid to spawn: " .. tostring(spawn))
+sb.logInfo("liquid id: " .. tostring(inputLiquid[1]))
+sb.logInfo("liquid count: " .. tostring(spawn.count))
+sb.logInfo("liquid item name: " .. tostring(spawn.name))
+  
 			--check if we have the capacity
 			local capacity = world.containerItemsCanFit(storage.entityId, spawn.name) or 0
 			if (capacity > 0) then
@@ -83,12 +113,12 @@ function pumpLiquid()
 
 				--if non-zero, spawn items
 				if spawn.count > 0 then
-					world.spawnItem(spawn, self.inputLocation)
+					world.spawnItem(spawn, storage.position)
 				end
 
 				--if there is any remainder, re-spawn the liquid at its source
-				if buffer > 0.0 then
-					world.spawnLiquid(self.inputLocation, inputLiquid[1], remainingAmount)
+				if remainingAmount > 0.0 then
+					world.spawnLiquid(storage.position, inputLiquid[1], remainingAmount)
 				end
 
 				return true
