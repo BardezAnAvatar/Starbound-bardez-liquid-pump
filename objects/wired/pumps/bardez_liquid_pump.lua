@@ -69,12 +69,12 @@ function pumpLiquid()
 			
 			--check if we have the capacity
 			local capacity = world.containerItemsCanFit(self.entityId, spawn.name) or 0
-			if (capacity > 0)
+			if (capacity > 0) then
 
 				--turn float liquid into items; remainder remains liquid
 				local fullAmount = spawn.count
 				local itemCount = math.floor(spawn.count)
-				if (itemCount > capacity)
+				if (itemCount > capacity) then
 					itemCount = capacity
 				end
 				
