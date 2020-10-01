@@ -7,15 +7,13 @@ function init()
 	if storage == nil then
 		storage = {}
 	end
-	
+
 	if storage.init == nil then
 		storage.init = true
 	end
-	
+
 	storage.position = storage.position or entity.position()
-sb.logInfo("Current position: " .. tostring(storage.position))
 	storage.entityId = entity.id()
-sb.logInfo("Current entityId: " .. tostring(storage.entityId))
 	isInstance = world.getProperty("ephemeral")
 	checkInput()
 	animate()
@@ -24,7 +22,7 @@ end
 
 
 function TransferInit()
-	transferUtil.init()	
+	transferUtil.init()
 	transferUtil.vars.inContainers={}
 	transferUtil.vars.outContainers={}
 	transferUtil.vars.containerId=nil
@@ -33,7 +31,8 @@ end
 
 
 function checkInput()
-	storage.currentState = not object.isOutputNodeConnected(0) or object.getInputNodeLevel(0)
+	storage.currentState = not object.isInputNodeConnected(0) or object.getInputNodeLevel(0)
+sb.logInfo("storage state: " .. tostring(storage.currentState))
 end
 
 
@@ -42,7 +41,7 @@ function onInputNodeChange(args)
 end
 
 
-function onNodeConnectionChange() 
+function onNodeConnectionChange()
 	checkInput()
 end
 
@@ -65,7 +64,7 @@ function update(dt)
 
 		if storage.currentState then
 			hasPumpedLiquid = pumpLiquid()
-			self.timer2 = dt * ((hasMovedLiquid and not isInstance) and 1 or 0)			
+			self.timer2 = dt * ((hasMovedLiquid and not isInstance) and 1 or 0)
 			outputnodes()
 			animate()
 		end
@@ -81,9 +80,6 @@ function pumpLiquid()
 	--	  int liquidId
 	--	  float amount
 	local inputLiquid = world.forceDestroyLiquid(storage.position)
-sb.logInfo("inputLiquid: " .. tostring(inputLiquid))
-sb.logInfo("liquid id: " .. tostring(inputLiquid[1]))
-sb.logInfo("liquid count: " .. tostring(inputLiquid[2]))
 
 	if inputLiquid and inputLiquid[2] > 0.0 then
 		local liquidData = root.liquidConfig(inputLiquid[1])
@@ -91,12 +87,7 @@ sb.logInfo("liquid count: " .. tostring(inputLiquid[2]))
 		if liquidData and liquidData.config and liquidData.config.itemDrop then
 
 			local spawn = { name = liquidData.config.itemDrop, count = inputLiquid[2], parameters = {} }
-			
-sb.logInfo("liquid to spawn: " .. tostring(spawn))
-sb.logInfo("liquid id: " .. tostring(inputLiquid[1]))
-sb.logInfo("liquid count: " .. tostring(spawn.count))
-sb.logInfo("liquid item name: " .. tostring(spawn.name))
-  
+
 			--check if we have the capacity
 			local capacity = world.containerItemsCanFit(storage.entityId, spawn.name) or 0
 			if (capacity > 0) then
@@ -107,13 +98,18 @@ sb.logInfo("liquid item name: " .. tostring(spawn.name))
 				if (itemCount > capacity) then
 					itemCount = capacity
 				end
-				
+
 				local remainingAmount = fullAmount - itemCount
 				spawn.count = itemCount
 
 				--if non-zero, spawn items
 				if spawn.count > 0 then
-					world.spawnItem(spawn, storage.position)
+					local inserted = world.containerAddItems(storage.entityId, spawn)
+
+					--if we were not able to insert the liquid into the pump, emit it back out
+					if ((inserterted and inserted.count) or 0 > 0) then
+						remainingAmount = remainingAmount + inserted.count
+					end
 				end
 
 				--if there is any remainder, re-spawn the liquid at its source
