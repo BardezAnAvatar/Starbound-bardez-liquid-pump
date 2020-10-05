@@ -60,7 +60,7 @@
 
     "parts" : {
       "one" : {
-	    "properties" : {"fullbright" : true, "centered" : false, "zLevel" : 3, "offset" : [2.0, 0.25]},
+	    "properties" : {"fullbright" : true, "centered" : false, "zLevel" : 3, "offset" : [2.0, 0.15]},
         "partStates" : {
           "one" : {
             "0" : {"properties" : {"image" : "<partImage>:0"}},
@@ -79,7 +79,7 @@
         }
       },
       "ten" : {
-	    "properties" : {"fullbright" : true, "centered" : false, "zLevel" : 3, "offset" : [1.25, 0.25]},
+	    "properties" : {"fullbright" : true, "centered" : false, "zLevel" : 3, "offset" : [1.25, 0.15]},
         "partStates" : {
           "ten" : {
             "0" : {"properties" : {"image" : "<partImage>:0"}},
@@ -98,7 +98,7 @@
         }
       },
       "hundred" : {
-	    "properties" : {"fullbright" : true, "centered" : false, "zLevel" : 3, "offset" : [0.5, 0.25]},
+	    "properties" : {"fullbright" : true, "centered" : false, "zLevel" : 3, "offset" : [0.5, 0.15]},
         "partStates" : {
           "hundred" : {
             "0" : {"properties" : {"image" : "<partImage>:0"}},
