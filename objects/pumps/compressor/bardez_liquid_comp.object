@@ -1,48 +1,40 @@
 {
-  "objectName" : "bardez_pump_intake",
+  "objectName" : "bardez_liquid_comp",
   "colonyTags" : ["wired"],
   "objectType": "container",
   "tooltipKind": "container",
-  "slotCount": 16,
-  "lockedSlots": [16],
   "printable" : false,
   "rarity" : "Common",
-  "description" : "Drains liquid and pumps it into an item network. ^cyan;Blue - Connect to signal^reset; ^red;Red - connect to Item Network^reset;",
+  "description" : "Quantum liquid compressor. ^cyan;Blue - Connect to signal^reset; ^red;Red - connect to Item Network^reset;",
   "shortdescription" : "Liquid Capturing Drain",
   "race" : "generic",
   "health" : 2.5,
   "category" : "wire",
   "price" : 100,
-  "inventoryIcon" : "/objects/pumps/bardez_liquid_pump_icon.png",
+  "inventoryIcon" : "/objects/pumps/bardez_liquid_comp_icon.png",
   "orientations" : [
         {
-            "image" : "/objects/pumps/bardez_liquid_pump.png:<color>.off",
+            "image" : "/objects/pumps/bardez_liquid_comp.png:<color>.off",
             "imagePosition" : [0, 0],
             "spaceScan" : 0.1,
             "anchors" : [ "background" ]
         }
     ],
 
-  "uiConfig": "/interface/bardez_liquid_pump/gui.config",
-
-  "scripts" : [ "/objects/pumps/bardez_liquid_pump.lua" ],
+  "scripts" : [ "/objects/pumps/bardez_liquid_comp.lua" ],
   "scriptDelta" : 5,
 
-  "animation" : "/objects/pumps/bardez_liquid_pump.animation",
+  "animation" : "/objects/pumps/bardez_liquid_comp.animation",
 
   "animationParts" : {
-    "inputPump" : "/objects/pumps/bardez_liquid_pump.png"
+    "inputCompressor" : "/objects/pumps/bardez_liquid_comp.png"
   },
   "animationPosition" : [0, 0],
 
   "inputNodes" : [ [0, 0] ],
-  "outputNodes" : [ [1, 0] ],
   "interval" : 5,
 
   "frameCooldown" : 5,
   "openFrameIndex" : 4,
-  "autoCloseCooldown" : 3600,
-
-  "kheAA_inDataNode": 0,
-  "kheAA_outDataNode": 0
+  "autoCloseCooldown" : 3600
 }

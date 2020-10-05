@@ -14,7 +14,7 @@
       }
     },
     "parts" : {
-      "inputPump" : {
+      "inputCompressor" : {
         "properties" : {
           "centered" : false
         },
