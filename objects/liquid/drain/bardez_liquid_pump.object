@@ -13,10 +13,10 @@
   "health" : 2.5,
   "category" : "wire",
   "price" : 100,
-  "inventoryIcon" : "/objects/pumps/drain/bardez_liquid_pump_icon.png",
+  "inventoryIcon" : "/objects/liquid/drain/bardez_liquid_pump_icon.png",
   "orientations" : [
         {
-            "image" : "/objects/pumps/drain/bardez_liquid_pump.png:<color>.off",
+            "image" : "/objects/liquid/drain/bardez_liquid_pump.png:<color>.off",
             "imagePosition" : [0, 0],
             "spaceScan" : 0.1,
             "anchors" : [ "background" ]
@@ -25,13 +25,13 @@
 
   "uiConfig": "/interface/bardez_liquid_pump/gui.config",
 
-  "scripts" : [ "/objects/pumps/drain/bardez_liquid_pump.lua" ],
+  "scripts" : [ "/objects/liquid/drain/bardez_liquid_pump.lua" ],
   "scriptDelta" : 5,
 
-  "animation" : "/objects/pumps/drain/bardez_liquid_pump.animation",
+  "animation" : "/objects/liquid/drain/bardez_liquid_pump.animation",
 
   "animationParts" : {
-    "inputPump" : "/objects/pumps/drain/bardez_liquid_pump.png"
+    "inputPump" : "/objects/liquid/drain/bardez_liquid_pump.png"
   },
   "animationPosition" : [0, 0],
 

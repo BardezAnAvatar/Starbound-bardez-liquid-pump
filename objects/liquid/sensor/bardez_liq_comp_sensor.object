@@ -25,7 +25,7 @@
   "scripts" : [ "bardez_liq_comp_sensor.lua" ],
   "scriptDelta" : 5,
 
-  "animation" : "fu_powersensorlarge.animation",
+  "animation" : "bardez_liq_comp_sensor.animation",
   "animationParts" : {
     "one" : "bardez_liq_comp_sensor_num.png",
 	"ten" : "bardez_liq_comp_sensor_num.png",
