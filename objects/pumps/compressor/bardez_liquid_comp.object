@@ -1,12 +1,10 @@
 {
   "objectName" : "bardez_liquid_comp",
   "colonyTags" : ["wired"],
-  "objectType": "container",
-  "tooltipKind": "container",
   "printable" : false,
   "rarity" : "Common",
   "description" : "Quantum liquid compressor. ^cyan;Blue - Connect to signal^reset; ^red;Red - connect to Item Network^reset;",
-  "shortdescription" : "Liquid Capturing Drain",
+  "shortdescription" : "Liquid Multiplier",
   "race" : "generic",
   "health" : 2.5,
   "category" : "wire",
@@ -32,9 +30,5 @@
   "animationPosition" : [0, 0],
 
   "inputNodes" : [ [0, 0] ],
-  "interval" : 5,
-
-  "frameCooldown" : 5,
-  "openFrameIndex" : 4,
-  "autoCloseCooldown" : 3600
+  "interval" : 5
 }
