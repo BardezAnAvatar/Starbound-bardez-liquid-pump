@@ -54,7 +54,7 @@
 
 			"warning" : {
 			  "properties" : {
-			    "image" : "<partImage>:default.warning"
+			    "image" : "<partImage>:sensor.warning"
 			  }
 			},
 
