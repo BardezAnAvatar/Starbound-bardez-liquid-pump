@@ -4,10 +4,13 @@ function init()
 	end
 
 	storage.position = storage.position or entity.position()
+	getTargets()
 end
 
 
 function update(dt)
+sb.logInfo("update invoked")
+
 	--LiquidLevel
 	--	Simple array of two values (not an object) returned by various world functions.
 	--	  int liquidId
@@ -28,17 +31,29 @@ function update(dt)
 			emitState(amount)
 		end
 	else
+		animator.setAnimationState("needleState", "normal")
 		emitState(0)
 	end
 end
 
 
 function onNodeConnectionChange()
+	getTargets()
+end
+
+
+function getTargets()
 	storage.targets = object.getOutputNodeIds(1)
+sb.logInfo("getTargets - storage.targets: " .. tostring(storage.targets))
+	for key in pairs(storage.targets) do
+sb.logInfo("getTargets - key: " .. tostring(key))
+sb.logInfo("getTargets - objectId: " .. tostring(storage.targets[key]))
+	end
 end
 
 
 function emitState(level)
+sb.logInfo("emitState - level: " .. tostring(level))
 	if level < 1000 then
 		--output true, that it is safe to continue
 		object.setOutputNodeLevel(0, true)
@@ -49,16 +64,17 @@ function emitState(level)
 
 	--emit the level to every connected wire
 	if storage.targets then
-		for key in pairs(storage.targets)
-			do pushGaugeLevel(storage.targets[key], level)
+		for key in pairs(storage.targets) do
+sb.logInfo("emitState - key: " .. tostring(key))
+			pushGaugeLevel(key, level)
 		end
 	end
 end
 
 
 function pushGaugeLevel(objectId, level)
-sb.logInfo("objectId: " .. tostring(objectId))
-sb.logInfo("level: " .. tostring(level))
+sb.logInfo("pushGaugeLevel - objectId: " .. tostring(objectId))
+sb.logInfo("pushGaugeLevel - level: " .. tostring(level))
 
 	if objectId and world.entityExists(objectId) then
 		world.callScriptedEntity(objectId, "liquidCompressionDisplay.receiveData", level)
