@@ -1,19 +1,19 @@
 {
-  "objectName" : "bardez_liq_comp_sensor",
+  "objectName" : "bardez_liq_comp_display",
   "printable" : false,
   "colonyTags" : [ "science", "power", "tech" ],
   "rarity" : "Common",
-  "description" : "A sensor that displays liquid pressure. This one goes up to 999. Emits a signal if the pressure rises above 999.",
+  "description" : "A sensor that displays liquid pressure, up to 999. Emits a signal until the pressure rises above 999.",
   "shortdescription" : "^cyan;Liquid Compression Sensor^white;",
   "race" : "generic",
   "category" : "wire",
   "price" : 1000,
 
-  "inventoryIcon" : "bardez_liq_comp_sensor_icon.png",
+  "inventoryIcon" : "bardez_liq_comp_display_icon.png",
 
   "orientations" : [
     {
-      "image" : "bardez_liq_comp_sensor.png:base",
+      "image" : "bardez_liq_comp_display.png:base",
       "imagePosition" : [0, 0],
 
       "spaceScan" : 0.1,
@@ -22,15 +22,15 @@
     }
   ],
   
-  "scripts" : [ "bardez_liq_comp_sensor.lua" ],
+  "scripts" : [ "bardez_liq_comp_display.lua" ],
   "scriptDelta" : 5,
 
-  "animation" : "bardez_liq_comp_sensor.animation",
+  "animation" : "bardez_liq_comp_display.animation",
   "animationParts" : {
-    "one" : "bardez_liq_comp_sensor_num.png",
-	"ten" : "bardez_liq_comp_sensor_num.png",
-	"hundred" : "bardez_liq_comp_sensor_num.png",
-    "base" : "bardez_liq_comp_sensor.png"
+    "one" : "bardez_liq_comp_display_num.png",
+	"ten" : "bardez_liq_comp_display_num.png",
+	"hundred" : "bardez_liq_comp_display_num.png",
+    "base" : "bardez_liq_comp_display.png"
   },
   "animationPosition" : [0, 0],
 
