@@ -1,6 +1,3 @@
-require "/scripts/liquid/liquidSensor.lua"
-
-
 function init()
 	if storage == nil then
 		storage = {}
@@ -51,13 +48,18 @@ function emitState(level)
 	end
 
 	--emit the level to every connected wire
-	for key in pairs(storage.targets)
-		do pushGaugeLevel(storage.targets[key], level)
+	if storage.targets then
+		for key in pairs(storage.targets)
+			do pushGaugeLevel(storage.targets[key], level)
+		end
 	end
 end
 
 
 function pushGaugeLevel(objectId, level)
+sb.logInfo("objectId: " .. tostring(objectId))
+sb.logInfo("level: " .. tostring(level))
+
 	if objectId and world.entityExists(objectId) then
 		world.callScriptedEntity(objectId, "liquidCompressionDisplay.receiveData", level)
 	end
