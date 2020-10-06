@@ -3,11 +3,10 @@
   "colonyTags" : [ "tech", "wire", "lab" ],
   "printable" : false,
   "rarity" : "uncommon",
-  "description" : "Gauges the pressure of liquid it is submerged in. Emits a signal until the pressure rises above 999. ^redLeft output:^reset signal. ^red:Right output:^reset display output",
-  "shortdescription" : "Liquid Pressure Gauge",
+  "description" : "Gauges the pressure of liquid it is submerged in. Emits a signal until the pressure rises above 999. ^red;Left output:^reset; signal. ^red;Right output:^reset; display output",
+  "shortdescription" : "^cyan;Liquid Pressure Gauge^reset;",
   "race" : "human",
-
-  "category" : "light",
+  "category" : "wire",
   "price" : 10,
 
   "inventoryIcon" : "bardez_liquid_sensor.png:sensor.normal",
@@ -32,5 +31,5 @@
     "needle" : "bardez_liquid_sensor.png"
   },
   "animationPosition" : [0, 0],
-  "outputNodes": [ [0,0], [0,1] ]
+  "outputNodes": [ [0,0], [1,0] ]
 }
