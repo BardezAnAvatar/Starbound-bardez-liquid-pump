@@ -23,10 +23,10 @@
     }
   ],
 
-  "scripts" : [ "/objects/liquid/bardez_liquid_sensor.lua" ],
+  "scripts" : [ "bardez_liquid_sensor.lua" ],
   "scriptDelta" : 5,
 
-  "animation" : "/objects/liquid/bardez_liquid_sensor.animation",
+  "animation" : "bardez_liquid_sensor.animation",
 
   "animationParts" : {
     "needle" : "bardez_liquid_sensor.png"
