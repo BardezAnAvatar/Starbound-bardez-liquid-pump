@@ -1,0 +1,36 @@
+{
+  "objectName" : "bardez_liquid_comp_sensor",
+  "colonyTags" : [ "tech", "wire", "lab" ],
+  "printable" : false,
+  "rarity" : "uncommon",
+  "description" : "Gauges the pressure of liquid it is submerged in.",
+  "shortdescription" : "Liquid Pressure Gauge",
+  "race" : "human",
+
+  "category" : "light",
+  "price" : 10,
+
+  "inventoryIcon" : "bardez_liquid_sensor.png:sensor.normal",
+  "orientations" : [
+    {
+      "image" : "bardez_liquid_sensor.png:sensor.normal",
+      "imagePosition" : [0, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ],
+
+      "direction" : "right"
+    }
+  ],
+
+  "scripts" : [ "/objects/liquid/bardez_liquid_sensor.lua" ],
+  "scriptDelta" : 5,
+
+  "animation" : "/objects/liquid/bardez_liquid_sensor.animation",
+
+  "animationParts" : {
+    "needle" : "bardez_liquid_sensor.png"
+  },
+  "animationPosition" : [0, 0],
+  "outputNodes": [ [0,0] ]
+}
