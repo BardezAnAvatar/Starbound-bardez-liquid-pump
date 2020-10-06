@@ -5,5 +5,21 @@
     "names" : [
       [ "sensor.mid", "sensor.warning", "sensor.fault", "sensor.normal" ]
     ]
+  },
+
+  "aliases" : {
+	"sensor.operating.1" : "sensor.normal",
+	"sensor.operating.2" : "sensor.mid",
+	"sensor.operating.3" : "sensor.warning",
+	"sensor.operating.4" : "sensor.mid",
+	"sensor.operating.5" : "sensor.normal",
+	"sensor.operating.6" : "sensor.mid",
+	"sensor.faulting.1" : "sensor.mid",
+	"sensor.faulting.2" : "sensor.warning",
+	"sensor.faulting.3" : "sensor.mid",
+	"sensor.faulting.4" : "sensor.warning",
+	"sensor.faulting.5" : "sensor.fault",
+	"sensor.faulting.6" : "sensor.warning",
+	"sensor.faulting.7" : "sensor.fault"
   }
 }

@@ -1,60 +1,78 @@
 {
   "animatedParts" : {
     "stateTypes" : {
-      "eyeState" : {
-        "default" : "closed",
+      "needleState" : {
+        "default" : "normal",
         "states" : {
-          "closed" : {
+          "normal" : {
             "frames" : 1
           },
-		  "opening" : {
-			"frames" : 3,
+          "mid" : {
+            "frames" : 1
+          },
+          "warning" : {
+            "frames" : 1
+          },
+          "fault" : {
+            "frames" : 1
+          },
+          "operating" : {
+			"frames" : 6,
 			"cycle" : 0.3,
 			"mode" : "transition",
-			"transition" : "open"
-		  },
-          "open" : {
-            "frames" : 1
+			"transition" : "mid"
           },
-		  "closing" : {
-		    "frames" : 3,
-			"cycle" : 0.2,
+          "faulting" : {
+			"frames" : 7,
+			"cycle" : 0.3,
 			"mode" : "transition",
-			"transition" : "closed"
-		  }
+			"transition" : "fault"
+          }
         }
       }
     },
 
     "parts" : {
-      "eye" : {
+      "needle" : {
         "properties" : {
           "centered" : false
         },
 
         "partStates" : {
-          "eyeState" : {
-            "closed" : {
+          "needleState" : {
+            "normal" : {
               "properties" : {
-                "image" : "<partImage>:default.closed"
+                "image" : "<partImage>:sensor.normal"
               }
             },
 
-            "open" : {
+            "mid" : {
               "properties" : {
-                "image" : "<partImage>:default.open"
+                "image" : "<partImage>:sensor.mid"
               }
             },
-			
-			"opening" : {
+
+			"warning" : {
 			  "properties" : {
-			    "image" : "<partImage>:default.<frame>"
+			    "image" : "<partImage>:default.warning"
 			  }
 			},
-			
-			"closing" : {
+
+			"fault" : {
 			  "properties" : {
-			    "image" : "<partImage>:default.closing.<frame>"
+			    "image" : "<partImage>:sensor.fault"
+			  }
+			},
+
+			"operating" : {
+			  "properties" : {
+			    "image" : "<partImage>:sensor.operating.<frame>"
+			  }
+			},
+
+			"faulting" : {
+			  "properties" : {
+			    "image" : "<partImage>:sensor.faulting.<frame>"
 			  }
 			}
           }
