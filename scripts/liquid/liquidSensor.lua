@@ -1,3 +1,7 @@
+
+liquidCompressionDisplay = {}
+
+
 function liquidCompressionDisplay.receiveData(level)
 	if storage == nil then
 		storage = {}
