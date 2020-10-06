@@ -10,6 +10,7 @@ end
 
 function update(dt)
 sb.logInfo("update invoked")
+	getTargets()
 
 	--LiquidLevel
 	--	Simple array of two values (not an object) returned by various world functions.
