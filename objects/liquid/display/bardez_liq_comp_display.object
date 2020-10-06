@@ -3,7 +3,7 @@
   "printable" : false,
   "colonyTags" : [ "science", "power", "tech" ],
   "rarity" : "Common",
-  "description" : "A sensor that displays liquid pressure, up to 999. Emits a signal until the pressure rises above 999.",
+  "description" : "A sensor that displays liquid pressure, up to 999.",
   "shortdescription" : "^cyan;Liquid Compression Sensor^white;",
   "race" : "generic",
   "category" : "wire",
@@ -34,5 +34,5 @@
   },
   "animationPosition" : [0, 0],
 
-  "outputNodes" : [ [0, 0] ]
+  "inputNodes" : [ [0, 0] ]
 }
