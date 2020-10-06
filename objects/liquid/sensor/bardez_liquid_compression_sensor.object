@@ -1,5 +1,5 @@
 {
-  "objectName" : "bardez_liquid_comp_sensor",
+  "objectName" : "bardez_liquid_compression_sensor",
   "colonyTags" : [ "tech", "wire", "lab" ],
   "printable" : false,
   "rarity" : "uncommon",
@@ -9,10 +9,10 @@
   "category" : "wire",
   "price" : 10,
 
-  "inventoryIcon" : "bardez_liquid_sensor.png:sensor.normal",
+  "inventoryIcon" : "bardez_liquid_compression_sensor.png:sensor.normal",
   "orientations" : [
     {
-      "image" : "bardez_liquid_sensor.png:sensor.normal",
+      "image" : "bardez_liquid_compression_sensor.png:sensor.normal",
       "imagePosition" : [0, 0],
 
       "spaceScan" : 0.1,
@@ -22,13 +22,13 @@
     }
   ],
 
-  "scripts" : [ "bardez_liquid_sensor.lua" ],
+  "scripts" : [ "bardez_liquid_compression_sensor.lua" ],
   "scriptDelta" : 5,
 
-  "animation" : "bardez_liquid_sensor.animation",
+  "animation" : "bardez_liquid_compression_sensor.animation",
 
   "animationParts" : {
-    "needle" : "bardez_liquid_sensor.png"
+    "needle" : "bardez_liquid_compression_sensor.png"
   },
   "animationPosition" : [0, 0],
   "outputNodes": [ [0,0], [1,0] ]
