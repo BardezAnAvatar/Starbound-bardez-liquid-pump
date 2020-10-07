@@ -9,7 +9,6 @@ end
 
 
 function update(dt)
-sb.logInfo("update invoked")
 	getTargets()
 
 	--LiquidLevel
@@ -45,16 +44,13 @@ end
 
 function getTargets()
 	storage.targets = object.getOutputNodeIds(1)
-sb.logInfo("getTargets - storage.targets: " .. tostring(storage.targets))
 	for key in pairs(storage.targets) do
-sb.logInfo("getTargets - key: " .. tostring(key))
-sb.logInfo("getTargets - objectId: " .. tostring(storage.targets[key]))
 	end
 end
 
 
 function emitState(level)
-sb.logInfo("emitState - level: " .. tostring(level))
+	
 	if level < 1000 then
 		--output true, that it is safe to continue
 		object.setOutputNodeLevel(0, true)
@@ -66,7 +62,6 @@ sb.logInfo("emitState - level: " .. tostring(level))
 	--emit the level to every connected wire
 	if storage.targets then
 		for key in pairs(storage.targets) do
-sb.logInfo("emitState - key: " .. tostring(key))
 			pushGaugeLevel(key, level)
 		end
 	end
@@ -74,9 +69,6 @@ end
 
 
 function pushGaugeLevel(objectId, level)
-sb.logInfo("pushGaugeLevel - objectId: " .. tostring(objectId))
-sb.logInfo("pushGaugeLevel - level: " .. tostring(level))
-
 	if objectId and world.entityExists(objectId) then
 		world.callScriptedEntity(objectId, "liquidCompressionDisplay.receiveData", level)
 	end

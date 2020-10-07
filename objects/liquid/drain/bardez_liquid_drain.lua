@@ -32,7 +32,6 @@ end
 
 function checkInput()
 	storage.currentState = not object.isInputNodeConnected(0) or object.getInputNodeLevel(0)
---sb.logInfo("storage state: " .. tostring(storage.currentState))
 end
 
 
