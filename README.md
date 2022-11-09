@@ -15,3 +15,6 @@ It will drain liquid in front of it when `on` and move that liquid into its cont
 - Quantum Liquid Compressor (`bardez_liquid_compressor`): this item is wirable, and when `on`, it will take a liquid in front of it an emit it
 compressed back out on the side, with a slight multiplier. This makes it a cheat item. It is a neat alternative to the liquid drip mechanics of
 infinite X liquids in the base game.
+
+Enjoy an image of the mod in action:
+![image](/assets/drain-in-action.png)
