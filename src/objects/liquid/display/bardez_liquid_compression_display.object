@@ -2,7 +2,7 @@
   "objectName" : "bardez_liquid_compression_display",
   "printable" : false,
   "colonyTags" : [ "science", "power", "tech" ],
-  "rarity" : "Common",
+  "rarity" : "uncommon",
   "description" : "A sensor that displays liquid pressure, up to 999.\n^cyan;Input:^reset; signal for liquid sensor.",
   "shortdescription" : "^cyan;Liquid Compression Display^reset;",
   "race" : "generic",

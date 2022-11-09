@@ -2,7 +2,7 @@
   "objectName" : "bardez_liquid_compressor",
   "colonyTags" : ["wired"],
   "printable" : false,
-  "rarity" : "Common",
+  "rarity" : "uncommon",
   "description" : "Quantum liquid multiplier. Uses quantum mechanics to somehow pull in liquid and push out more of it than consumed.\n^cyan;Blue^reset; - On/Off switch",
   "shortdescription" : "^cyan;Quantum Liquid Multiplier^reset;",
   "race" : "generic",
