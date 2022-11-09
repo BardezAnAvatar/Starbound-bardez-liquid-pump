@@ -3,20 +3,20 @@
   "colonyTags" : ["wired"],
   "printable" : false,
   "rarity" : "Common",
-  "description" : "Quantum liquid multiplier. Uses quantum mechanics to somehow pull in liquid and push out more of it than consumed.\n^cyan;Blue - Connect to signal^reset;\n^red;Red - connect to Item Network^reset;",
-  "shortdescription" : "Quantum Liquid Multiplier",
+  "description" : "Quantum liquid multiplier. Uses quantum mechanics to somehow pull in liquid and push out more of it than consumed.\n^cyan;Blue^reset; - On/Off switch",
+  "shortdescription" : "^cyan;Quantum Liquid Multiplier^reset;",
   "race" : "generic",
   "health" : 2.5,
   "category" : "wire",
   "price" : 100,
   "inventoryIcon" : "bardez_liquid_compressor_icon.png",
   "orientations" : [
-        {
-            "image" : "bardez_liquid_compressor.png:<color>.off",
-            "imagePosition" : [0, 0],
-            "spaceScan" : 0.1,
-            "anchors" : [ "background" ]
-        }
+      {
+          "image" : "bardez_liquid_compressor.png:<color>.off",
+          "imagePosition" : [0, 0],
+          "spaceScan" : 0.1,
+          "anchors" : [ "background" ]
+      }
     ],
 
   "scripts" : [ "bardez_liquid_compressor.lua" ],
