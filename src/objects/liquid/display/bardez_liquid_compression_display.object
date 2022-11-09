@@ -4,7 +4,7 @@
   "colonyTags" : [ "science", "power", "tech" ],
   "rarity" : "Common",
   "description" : "A sensor that displays liquid pressure, up to 999.",
-  "shortdescription" : "^cyan;Liquid Compression Sensor^white;",
+  "shortdescription" : "^cyan;Liquid Compression Display^white;",
   "race" : "generic",
   "category" : "wire",
   "price" : 1000,
