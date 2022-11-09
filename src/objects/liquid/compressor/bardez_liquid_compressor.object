@@ -3,7 +3,7 @@
   "colonyTags" : ["wired"],
   "printable" : false,
   "rarity" : "rare",
-  "description" : "Quantum liquid multiplier. Uses quantum mechanics to somehow pull in liquid and push out more of it than consumed.\n^cyan;Blue^reset; - On/Off switch",
+  "description" : "Quantum liquid multiplier. Uses quantum mechanics to somehow pull in liquid and push out more of it than consumed.\n^cyan;Input^reset; - On/Off signal",
   "shortdescription" : "^cyan;Quantum Liquid Multiplier^reset;",
   "race" : "generic",
   "health" : 2.5,
