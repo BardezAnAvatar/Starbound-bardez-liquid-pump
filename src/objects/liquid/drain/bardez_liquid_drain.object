@@ -7,7 +7,7 @@
   "lockedSlots": [16],
   "printable" : false,
   "rarity" : "uncommon",
-  "description" : "Drains liquid and pumps it into an item network.\n^cyan;Blue - Connect to signal^reset;\n^red;Red - connect to Item Network^reset;",
+  "description" : "Drains liquid and pumps it into an item network.\n^cyan;Blue^reset; - Connect to signal\n^red;Red^reset; - Connect to Item Network",
   "shortdescription" : "^cyan;Liquid Capturing Drain^reset;",
   "race" : "generic",
   "health" : 2.5,
