@@ -1,0 +1,13 @@
+{
+  "input" : [
+    { "item" : "wire", "count" : 10 },
+    { "item" : "tungstenbar","count" : 2 },
+    { "item" : "electromagnet","count" : 1 }
+  ],
+  "output" : {
+    "item" : "bardez_liquid_drain",
+    "count" : 1
+  },
+  "duration" : 0.15,
+  "groups" : [ "craftingwiring", "mechanics", "all" ]
+}

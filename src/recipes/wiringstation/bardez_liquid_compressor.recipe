@@ -1,0 +1,14 @@
+{
+  "input" : [
+    { "item" : "wire", "count" : 15 },
+    { "item" : "titaniumbar","count" : 2 },
+    { "item" : "tungstenbar","count" : 4 },
+    { "item" : "electromagnet","count" : 1 }
+  ],
+  "output" : {
+    "item" : "bardez_liquid_compressor",
+    "count" : 1
+  },
+  "duration" : 0.3,
+  "groups" : [ "craftingwiring", "mechanics", "all" ]
+}
