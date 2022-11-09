@@ -23,7 +23,7 @@
         }
     ],
 
-  "uiConfig": "/interface/bardez_liquid_drain/gui.config",
+  "uiConfig": "/interface/chests/cdx/chest<slots>.config",
 
   "scripts" : [ "bardez_liquid_drain.lua" ],
   "scriptDelta" : 5,
