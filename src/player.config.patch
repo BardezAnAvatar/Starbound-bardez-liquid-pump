@@ -1,0 +1,6 @@
+{
+	[ { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item" : "bardez_liquid_compressor"} } ],
+	[ { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item" : "bardez_liquid_compression_display"} } ],
+	[ { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item" : "bardez_liquid_drain"} } ],
+	[ { "op": "add", "path": "/defaultBlueprints/tier1/-", "value": {"item" : "bardez_liquid_compression_sensor"} } ],
+}
