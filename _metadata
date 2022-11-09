@@ -1,11 +1,11 @@
 {
-  "name" : "Liquid pump converter",
-  "friendlyName" : "Liquid pump converter",
-  "description" : "Takes it in the front and turns it into items",
-  "author" : "Bardez",
   "version" : "1.00",
-  "link" : null,
-  "steamContentId" : "000000001",
-  "tags" : "pumps",
-  "priority" : 0
+  "author" : "Bardez",
+  "tags" : "Cheats and God Items|Furniture and Objects",
+  "description" : "Takes it in the front and turns it into items",
+  "name" : "Liquid pump converter",
+  "priority" : 0,
+  "friendlyName" : "Liquid pump converter",
+  "steamContentId" : "2883446019",
+  "link" : "steam://url/CommunityFilePage/2883446019"
 }
