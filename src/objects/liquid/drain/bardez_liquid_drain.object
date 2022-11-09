@@ -6,21 +6,21 @@
   "slotCount": 16,
   "lockedSlots": [16],
   "printable" : false,
-  "rarity" : "Common",
-  "description" : "Drains liquid and pumps it into an item network. ^cyan;Blue - Connect to signal^reset; ^red;Red - connect to Item Network^reset;",
-  "shortdescription" : "Liquid Capturing Drain",
+  "rarity" : "uncommon",
+  "description" : "Drains liquid and pumps it into an item network.\n^cyan;Input^reset;: On/Off signal\n^red;Output^reset;: Connect to Item Network",
+  "shortdescription" : "^cyan;Liquid Capturing Drain^reset;",
   "race" : "generic",
   "health" : 2.5,
   "category" : "wire",
   "price" : 100,
   "inventoryIcon" : "bardez_liquid_drain_icon.png",
   "orientations" : [
-        {
-            "image" : "bardez_liquid_drain.png:<color>.off",
-            "imagePosition" : [0, 0],
-            "spaceScan" : 0.1,
-            "anchors" : [ "background" ]
-        }
+      {
+          "image" : "bardez_liquid_drain.png:<color>.off",
+          "imagePosition" : [0, 0],
+          "spaceScan" : 0.1,
+          "anchors" : [ "background" ]
+      }
     ],
 
   "uiConfig": "/interface/chests/cdx/chest<slots>.config",
