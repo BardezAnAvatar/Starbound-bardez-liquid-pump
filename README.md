@@ -17,4 +17,5 @@ compressed back out on the side, with a slight multiplier. This makes it a cheat
 infinite X liquids in the base game.
 
 Enjoy an image of the mod in action:
+
 ![image](/assets/drain-in-action.gif)
