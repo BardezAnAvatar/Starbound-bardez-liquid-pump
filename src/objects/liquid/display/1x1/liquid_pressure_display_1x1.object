@@ -28,8 +28,6 @@
   "animation" : "liquid_pressure_display_1x1.animation",
   "animationParts" : {
     "one":     "/objects/liquid/display/liquid_compression_display_num.png",
-	  "ten":     "/objects/liquid/display/liquid_compression_display_num.png",
-	  "hundred": "/objects/liquid/display/liquid_compression_display_num.png",
     "base":    "liquid_pressure_display_1x1.png"
   },
   "animationPosition" : [0, 0],
