@@ -9,7 +9,10 @@ end
 
 
 function update(dt)
-	if storage.displayCompressionLevel and storage.liquidCompressionLevel then
+	local active = (object.isInputNodeConnected(0)) or object.getInputNodeLevel(0)
+	local compressed = storage.displayCompressionLevel and storage.liquidCompressionLevel
+
+	if compressed and active then
 		if storage.liquidCompressionLevel <= 999 then
 			animator.setAnimationState("one", string.sub(storage.displayCompressionLevel,-1))
 			animator.setAnimationState("ten", string.sub(storage.displayCompressionLevel,-2,-2))
