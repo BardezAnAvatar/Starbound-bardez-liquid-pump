@@ -10,3 +10,6 @@ ehthumbs.db
 
 # Folder config
 Desktop.ini
+
+#Excel Temps
+~*.xls*
