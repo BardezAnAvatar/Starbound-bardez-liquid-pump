@@ -13,16 +13,18 @@ function init()
 	storage.displayDigits.hundred = config.getParameter("displayDigits.hundred", false)
 	storage.displayDigits.thousand = config.getParameter("displayDigits.thousand", false)
 	storage.displayDigits.tenthousand = config.getParameter("displayDigits.tenthousand", false)
+
+	-- Same with the pressure maximum
+	storage.pressureMax = config.getParameter("pressureMax", 9)
 end
 
 
 function update(dt)
 	local active = (object.isInputNodeConnected(0)) or object.getInputNodeLevel(0)
 	local compressed = storage.displayCompressionLevel and storage.liquidCompressionLevel
-	local max = config.getParameter("pressureMax", 9)
 
 	if compressed and active then
-		if storage.liquidCompressionLevel <= max then
+		if storage.liquidCompressionLevel <= storage.pressureMax then
 			setDigit("one", string.sub(storage.displayCompressionLevel,-1))
 			setDigit("ten", string.sub(storage.displayCompressionLevel,-2,-2))
 			setDigit("hundred", string.sub(storage.displayCompressionLevel,-3,-3))
