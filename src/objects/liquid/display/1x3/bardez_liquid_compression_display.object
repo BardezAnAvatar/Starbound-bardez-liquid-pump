@@ -35,5 +35,12 @@
   "animationPosition" : [0, 0],
 
   "inputNodes" : [ [0, 0] ],
-  "pressureMax": 999
+  "pressureMax": 999,
+  "displayDigits": {
+    "one": true,
+    "ten": true,
+    "hundred": true,
+    "thousand": false,
+    "tenthousand": false
+  }
 }

@@ -15,17 +15,31 @@ function update(dt)
 
 	if compressed and active then
 		if storage.liquidCompressionLevel <= max then
-			animator.setAnimationState("one", string.sub(storage.displayCompressionLevel,-1))
-			animator.setAnimationState("ten", string.sub(storage.displayCompressionLevel,-2,-2))
-			animator.setAnimationState("hundred", string.sub(storage.displayCompressionLevel,-3,-3))
+			setDigit("one", string.sub(storage.displayCompressionLevel,-1))
+			setDigit("ten", string.sub(storage.displayCompressionLevel,-2,-2))
+			setDigit("hundred", string.sub(storage.displayCompressionLevel,-3,-3))
+			setDigit("thousand", string.sub(storage.displayCompressionLevel,-4,-4))
+			setDigit("tenthousand", string.sub(storage.displayCompressionLevel,-5,-5))
 		else
-			animator.setAnimationState("one", "excess")
-			animator.setAnimationState("ten", "excess")
-			animator.setAnimationState("hundred", "excess")
+			setDigit("one", "excess")
+			setDigit("ten", "excess")
+			setDigit("hundred", "excess")
+			setDigit("thousand", "excess")
+			setDigit("tenthousand", "excess")
 		end
 	else
-		animator.setAnimationState("one", "invalid")
-		animator.setAnimationState("ten", "invalid")
-		animator.setAnimationState("hundred", "invalid")
+		setDigit("one", "invalid")
+		setDigit("ten", "invalid")
+		setDigit("hundred", "invalid")
+		setDigit("thousand", "invalid")
+		setDigit("tenthousand", "invalid")
+	end
+end
+
+function setDigit(digit, value)
+	local hasDigit = config.getParameter("displayDigits." .. digit, false)
+
+	if hasDigit then
+		animator.setAnimationState(digit, value)
 	end
 end
