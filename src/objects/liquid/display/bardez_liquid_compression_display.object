@@ -27,10 +27,10 @@
 
   "animation" : "bardez_liquid_compression_display.animation",
   "animationParts" : {
-    "one" : "bardez_liquid_compression_display_num.png",
-	"ten" : "bardez_liquid_compression_display_num.png",
-	"hundred" : "bardez_liquid_compression_display_num.png",
-    "base" : "bardez_liquid_compression_display.png"
+    "one":     "bardez_liquid_compression_display_num.png",
+	  "ten":     "bardez_liquid_compression_display_num.png",
+	  "hundred": "bardez_liquid_compression_display_num.png",
+    "base":    "bardez_liquid_compression_display.png"
   },
   "animationPosition" : [0, 0],
 
