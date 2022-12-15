@@ -13,7 +13,7 @@
 
   "orientations" : [
     {
-      "image" : "bardez_liquid_compression_display.png:base",
+      "image" : "liquid_pressure_display_1x3.png:base",
       "imagePosition" : [0, 0],
 
       "spaceScan" : 0.1,
@@ -30,7 +30,7 @@
     "one":     "/objects/liquid/display/bardez_liquid_compression_display_num.png",
 	  "ten":     "/objects/liquid/display/bardez_liquid_compression_display_num.png",
 	  "hundred": "/objects/liquid/display/bardez_liquid_compression_display_num.png",
-    "base":    "bardez_liquid_compression_display.png"
+    "base":    "liquid_pressure_display_1x3.png"
   },
   "animationPosition" : [0, 0],
 
