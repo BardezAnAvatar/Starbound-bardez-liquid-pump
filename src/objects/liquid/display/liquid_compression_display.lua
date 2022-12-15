@@ -5,6 +5,14 @@ function init()
 	if storage == nil then
 		storage = {}
 	end
+
+	-- Load the digits once on init so we don't fetch it OVER AND OVER
+	storage.displayDigits = {}
+	storage.displayDigits.one = config.getParameter("displayDigits.one", false)
+	storage.displayDigits.ten = config.getParameter("displayDigits.ten", false)
+	storage.displayDigits.hundred = config.getParameter("displayDigits.hundred", false)
+	storage.displayDigits.thousand = config.getParameter("displayDigits.thousand", false)
+	storage.displayDigits.tenthousand = config.getParameter("displayDigits.tenthousand", false)
 end
 
 
@@ -37,7 +45,7 @@ function update(dt)
 end
 
 function setDigit(digit, value)
-	local hasDigit = config.getParameter("displayDigits." .. digit, false)
+	local hasDigit = storage.displayDigits[digit]
 
 	if hasDigit then
 		animator.setAnimationState(digit, value)
