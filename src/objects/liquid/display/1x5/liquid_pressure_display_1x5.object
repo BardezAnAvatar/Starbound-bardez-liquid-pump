@@ -7,7 +7,7 @@
   "shortdescription" : "^cyan;Liq. Pressure Display^reset;: ^orange;1x5^reset;",
   "race" : "generic",
   "category" : "wire",
-  "price" : 1000,
+  "price" : 205,
 
   "inventoryIcon" : "liquid_pressure_display_icon_1x5.png",
 
