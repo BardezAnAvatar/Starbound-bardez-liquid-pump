@@ -11,9 +11,10 @@ end
 function update(dt)
 	local active = (object.isInputNodeConnected(0)) or object.getInputNodeLevel(0)
 	local compressed = storage.displayCompressionLevel and storage.liquidCompressionLevel
+	local max = config.getParameter("pressureMax", 9)
 
 	if compressed and active then
-		if storage.liquidCompressionLevel <= 999 then
+		if storage.liquidCompressionLevel <= max then
 			animator.setAnimationState("one", string.sub(storage.displayCompressionLevel,-1))
 			animator.setAnimationState("ten", string.sub(storage.displayCompressionLevel,-2,-2))
 			animator.setAnimationState("hundred", string.sub(storage.displayCompressionLevel,-3,-3))

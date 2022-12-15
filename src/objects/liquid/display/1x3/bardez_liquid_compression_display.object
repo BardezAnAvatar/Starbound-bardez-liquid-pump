@@ -34,5 +34,6 @@
   },
   "animationPosition" : [0, 0],
 
-  "inputNodes" : [ [0, 0] ]
+  "inputNodes" : [ [0, 0] ],
+  "pressureMax": 999
 }
