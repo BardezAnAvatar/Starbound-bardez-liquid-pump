@@ -9,7 +9,7 @@
   "category" : "wire",
   "price" : 1000,
 
-  "inventoryIcon" : "liquid_compression_display_icon_1x3.png",
+  "inventoryIcon" : "liquid_pressure_display_icon_1x3.png",
 
   "orientations" : [
     {
