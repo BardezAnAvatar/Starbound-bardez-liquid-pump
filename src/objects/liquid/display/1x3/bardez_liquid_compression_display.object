@@ -22,7 +22,7 @@
     }
   ],
   
-  "scripts" : [ "bardez_liquid_compression_display.lua" ],
+  "scripts" : [ "/objects/liquid/display/liquid_compression_display.lua" ],
   "scriptDelta" : 5,
 
   "animation" : "bardez_liquid_compression_display.animation",
