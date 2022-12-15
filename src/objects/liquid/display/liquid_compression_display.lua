@@ -12,7 +12,7 @@ function init()
 	storage.displayDigits.ten = config.getParameter("displayDigits.ten", false)
 	storage.displayDigits.hundred = config.getParameter("displayDigits.hundred", false)
 	storage.displayDigits.thousand = config.getParameter("displayDigits.thousand", false)
-	storage.displayDigits.tenthousand = config.getParameter("displayDigits.tenthousand", false)
+	storage.displayDigits.tenThousand = config.getParameter("displayDigits.tenThousand", false)
 
 	-- Same with the pressure maximum
 	storage.pressureMax = config.getParameter("pressureMax", 9)
@@ -29,20 +29,20 @@ function update(dt)
 			setDigit("ten", string.sub(storage.displayCompressionLevel,-2,-2))
 			setDigit("hundred", string.sub(storage.displayCompressionLevel,-3,-3))
 			setDigit("thousand", string.sub(storage.displayCompressionLevel,-4,-4))
-			setDigit("tenthousand", string.sub(storage.displayCompressionLevel,-5,-5))
+			setDigit("tenThousand", string.sub(storage.displayCompressionLevel,-5,-5))
 		else
 			setDigit("one", "excess")
 			setDigit("ten", "excess")
 			setDigit("hundred", "excess")
 			setDigit("thousand", "excess")
-			setDigit("tenthousand", "excess")
+			setDigit("tenThousand", "excess")
 		end
 	else
 		setDigit("one", "invalid")
 		setDigit("ten", "invalid")
 		setDigit("hundred", "invalid")
 		setDigit("thousand", "invalid")
-		setDigit("tenthousand", "invalid")
+		setDigit("tenThousand", "invalid")
 	end
 end
 

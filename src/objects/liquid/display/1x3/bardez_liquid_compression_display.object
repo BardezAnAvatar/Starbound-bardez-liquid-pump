@@ -41,6 +41,6 @@
     "ten": true,
     "hundred": true,
     "thousand": false,
-    "tenthousand": false
+    "tenThousand": false
   }
 }
