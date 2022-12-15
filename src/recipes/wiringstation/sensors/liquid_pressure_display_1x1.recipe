@@ -1,0 +1,13 @@
+{
+  "input" : [
+    { "item" : "wire", "count" : 10 },
+    { "item" : "tungstenbar","count" : 1 },
+    { "item" : "electromagnet","count" : 1 }
+  ],
+  "output" : {
+    "item" : "bardez_liquid_compression_display_1x1",
+    "count" : 1
+  },
+  "duration" : 0.15,
+  "groups" : [ "craftingwiring", "sensors" ]
+}
