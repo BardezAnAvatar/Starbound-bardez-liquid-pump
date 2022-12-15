@@ -1,0 +1,47 @@
+{
+  "objectName" : "bardez_liquid_compression_display_1x4",
+  "printable" : false,
+  "colonyTags" : [ "science", "power", "tech" ],
+  "rarity" : "uncommon",
+  "description" : "A sensor that displays liquid pressure, up to 9999.\n^cyan;Input:^reset; Data signal from liquid sensor.",
+  "shortdescription" : "^cyan;Liq. Pressure Display^reset;: ^orange;1x4^reset;",
+  "race" : "generic",
+  "category" : "wire",
+  "price" : 1000,
+
+  "inventoryIcon" : "liquid_pressure_display_icon_1x4.png",
+
+  "orientations" : [
+    {
+      "image" : "liquid_pressure_display_1x4.png:base",
+      "imagePosition" : [0, 0],
+
+      "spaceScan" : 0.1,
+      "anchors" : [ "background" ],
+      "direction" : "right"
+    }
+  ],
+  
+  "scripts" : [ "/objects/liquid/display/liquid_compression_display.lua" ],
+  "scriptDelta" : 5,
+
+  "animation" : "liquid_pressure_display_1x4.animation",
+  "animationParts" : {
+    "one":      "/objects/liquid/display/liquid_compression_display_num.png",
+	  "ten":      "/objects/liquid/display/liquid_compression_display_num.png",
+	  "hundred":  "/objects/liquid/display/liquid_compression_display_num.png",
+	  "thousand": "/objects/liquid/display/liquid_compression_display_num.png",
+    "base":     "liquid_pressure_display_1x4.png"
+  },
+  "animationPosition" : [0, 0],
+
+  "inputNodes" : [ [0, 0] ],
+  "pressureMax": 9999,
+  "displayDigits": {
+    "one": true,
+    "ten": true,
+    "hundred": true,
+    "thousand": true,
+    "tenThousand": false
+  }
+}
