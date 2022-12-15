@@ -2,13 +2,13 @@
   "objectName" : "bardez_liquid_compressor",
   "colonyTags" : ["wired"],
   "printable" : false,
-  "rarity" : "rare",
+  "rarity" : "legendary",
   "description" : "Quantum liquid multiplier. Uses quantum mechanics to somehow pull in liquid and push out more of it than consumed.\n^cyan;Input^reset;: On/Off signal",
   "shortdescription" : "^cyan;Quantum Liquid Multiplier^reset;",
   "race" : "generic",
   "health" : 2.5,
   "category" : "wire",
-  "price" : 100,
+  "price" : 1000,
   "inventoryIcon" : "bardez_liquid_compressor_icon.png",
   "orientations" : [
       {
