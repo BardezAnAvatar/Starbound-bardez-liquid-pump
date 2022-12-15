@@ -8,5 +8,5 @@ function liquidCompressionDisplay.receiveData(level)
 	end
 
 	storage.liquidCompressionLevel = level
-	storage.displayCompressionLevel = "00" .. tostring(level)
+	storage.displayCompressionLevel = "00000" .. tostring(level)
 end
