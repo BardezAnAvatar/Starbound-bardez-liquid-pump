@@ -15,7 +15,7 @@ This mod does the following:
     - 1x4 (`bardez_liquid_compression_display_1x4`)
     - 1x5 (`bardez_liquid_compression_display_1x5`)
   - **Liquid Capturing Drain** (`bardez_liquid_drain`), which is both a drain and a container. It is a wirable object compatible with item transfer networks, too! It will drain liquid in front of it when `on` and move that liquid into its container inventory.
-  - **Quantum Liquid Multiplier** (`bardez_liquid_compressor`): this item is wirable, and when `on`, it will take a liquid in front of it an emit it compressed back out on the side, with a slight multiplier. While this makes it a cheat item, it is balanced with existing Frackin' Universe items and crafting requirements, so it isn't _too_ OP IMO. It is a neat alternative to the liquid drip mechanics of sinfinite X liquids in the base game.
+  - **Quantum Liquid Multiplier** (`bardez_liquid_compressor`): this item is wirable, and when `on`, it will take a liquid in front of it an emit it compressed back out on the side, with a slight multiplier. While this makes it a cheat item, it is balanced with existing Frackin' Universe items and crafting requirements, so it isn't _too_ OP IMO. It is a neat alternative to the liquid drip mechanics of infinite X liquids in the base game.
 - Integrates with the Frackin' Universe research tree and adds the compressor to the madness tree, while the rest are added to electronics
 
 Enjoy an image of the mod in action:
