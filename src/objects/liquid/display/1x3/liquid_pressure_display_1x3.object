@@ -1,5 +1,5 @@
 {
-  "objectName" : "bardez_liquid_compression_display",
+  "objectName" : "bardez_liquid_compression_display",   //maintaining for backward compatability, since this was the OG
   "printable" : false,
   "colonyTags" : [ "science", "power", "tech" ],
   "rarity" : "uncommon",
@@ -25,7 +25,7 @@
   "scripts" : [ "/objects/liquid/display/liquid_compression_display.lua" ],
   "scriptDelta" : 5,
 
-  "animation" : "bardez_liquid_compression_display.animation",
+  "animation" : "liquid_pressure_display_1x3.animation",
   "animationParts" : {
     "one":     "/objects/liquid/display/liquid_compression_display_num.png",
 	  "ten":     "/objects/liquid/display/liquid_compression_display_num.png",
