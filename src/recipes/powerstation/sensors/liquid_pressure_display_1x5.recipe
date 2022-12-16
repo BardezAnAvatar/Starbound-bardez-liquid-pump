@@ -10,5 +10,5 @@
     "count" : 1
   },
   "duration" : 0.15,
-  "groups" : [ "craftingwiring", "sensors" ]
+  "groups" : [ "powerstation1", "tool", "all" ]
 }
