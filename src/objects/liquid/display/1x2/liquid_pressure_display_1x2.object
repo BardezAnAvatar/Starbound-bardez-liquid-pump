@@ -3,7 +3,7 @@
   "printable" : false,
   "colonyTags" : [ "science", "power", "tech" ],
   "rarity" : "uncommon",
-  "description" : "A sensor that displays liquid pressure, up to 99.\n^cyan;Input:^reset; Data signal from liquid sensor.",
+  "description" : "A display for liquid pressure, up to 99.\n^cyan;Input:^reset; Data signal from liquid sensor.",
   "shortdescription" : "^cyan;Liq. Pressure Display^reset;: ^orange;1x2^reset;",
   "race" : "generic",
   "category" : "wire",
