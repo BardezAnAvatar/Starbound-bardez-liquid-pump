@@ -3,7 +3,7 @@
   "colonyTags" : [ "tech", "wire", "lab" ],
   "printable" : false,
   "rarity" : "uncommon",
-  "description" : "Measures pressure of liquid it is submerged in.\n^red;Output^reset; 1 (Left): Signal; `true` if pressure < 1000.\n^red;Output^reset; 2 (Right): Signal for display",
+  "description" : "Measures pressure of liquid it is submerged in.\n^red;Output^reset; 1 (L): Signal; `true` if pressure < 1000.\n^red;Output^reset; 2 (R): Display signal",
   "shortdescription" : "^cyan;Liquid Pressure Gauge^reset;",
   "race" : "human",
   "category" : "wire",
