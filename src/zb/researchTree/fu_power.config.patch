@@ -1,0 +1,87 @@
+[
+  //Remove the pressure pump from item network unlocks
+  [
+    {"op":"test","path":"/researchTree/fu_power/itemnetwork/unlocks/12","value":"pumpoutpressurefu"},
+    {"op":"remove","path":"/researchTree/fu_power/itemnetwork/unlocks/12"}
+  ],
+  //move pumps to the end of the list for logical organization
+  [
+    {"op":"test","path":"/researchTree/fu_power/itemnetwork/unlocks/11","value":"pumpinfu"},
+    {"op":"remove","path":"/researchTree/fu_power/itemnetwork/unlocks/11"},
+    {
+      "op": "add",
+      "path": "/researchTree/fu_power/itemnetwork/unlocks/-",
+      "value": "pumpinfu"
+    }
+  ],
+  [
+    {"op":"test","path":"/researchTree/fu_power/itemnetwork/unlocks/10","value":"pumpoutfu"},
+    {"op":"remove","path":"/researchTree/fu_power/itemnetwork/unlocks/10"},
+    {
+      "op": "add",
+      "path": "/researchTree/fu_power/itemnetwork/unlocks/-",
+      "value": "pumpoutfu"
+    }
+  ],
+  //Put the liquid drain in its place
+  [
+    {
+      "op": "add",
+      "path": "/researchTree/fu_power/itemnetwork/unlocks/-",
+      "value": "bardez_liquid_drain"
+    }
+  ],
+  //Liquid Pressure Techs
+  [
+    {
+      "op" : "add",
+      "path" : "/researchTree/fu_power/pressurized_liquid",
+      "value" : {
+        "icon" : "/zb/researchTree/power/bardez_liquid_pressure_gauge.png",
+        "children" : [ ],
+        "position" : [-160, 0],
+        "price" : [ ["fuscienceresource", 1200], ["drain", 5], ["electromagnet", 5], ["pumpinfu", 3] ],
+        "unlocks" : [
+          "pumpoutpressurefu",
+          "bardez_liquid_compression_sensor",
+          "bardez_liquid_compression_display_1x1",
+          "bardez_liquid_compression_display_1x2",
+          "bardez_liquid_compression_display",        //1x3
+          "bardez_liquid_compression_display_1x4",
+          "bardez_liquid_compression_display_1x5"
+        ]
+      }
+    }
+  ],
+  [
+    {
+      "op" : "add",
+      "path" : "/researchTree/fu_power/itemnetwork/children/-",
+      "value" : "pressurized_liquid"
+    }
+  ],
+  //strings
+  [
+    {
+      "op" : "add",
+      "path" : "/strings/research/pressurized_liquid",
+      "value" : [ "Pressurized Liquid Pumps", "^orange;Tier 3^reset;\n\nUse pumps to create liquid repositories at pressures higher than standard atmospheric conditions. Measure the pressure and monitor for safe levels to keep things just right.\n\nBuild at your ^orange;Electronics Center^reset;." ]
+    }
+  ],
+  //acronyms
+  [
+      {
+      "op" : "add",
+      "path" : "/acronyms/fu_power/PRESSUREPUMP01",
+      "value" : "pressurized_liquid"
+    }
+  ],
+  //hidden research
+  [
+    {
+      "op" : "add",
+      "path" : "/hiddenResearch/fu_power/-",
+      "value" : "PRESSUREPUMP01"
+    }
+  ]
+]

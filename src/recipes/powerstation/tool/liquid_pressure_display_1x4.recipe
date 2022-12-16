@@ -1,0 +1,14 @@
+{
+  "input" : [
+    { "item" : "wire", "count" : 10 },
+    { "item" : "tungstenbar","count" : 4 },
+    { "item" : "electromagnet","count" : 1 },
+    { "item" : "siliconboard","count" : 2 }
+  ],
+  "output" : {
+    "item" : "bardez_liquid_compression_display_1x4",
+    "count" : 1
+  },
+  "duration" : 0.15,
+  "groups" : [ "powerstation1", "tool", "all" ]
+}

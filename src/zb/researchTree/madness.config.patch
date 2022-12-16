@@ -1,0 +1,37 @@
+[
+  //Quantum Liquid Multiplier
+  {
+    "op" : "add",
+    "path" : "/researchTree/frackinuniversemadness/liquid_multiplier",
+    "value" : {
+      "icon" : "/objects/liquid/compressor/bardez_liquid_compressor_icon.png",
+      "children" : [ ],
+      "position" : [-155, -150],
+      "price" : [ ["fumadnessresource", 800], ["fuscienceresource", 4000], ["exoticmatter", 5], ["redmatter", 5], ["precursorfluid", 2] ],
+      "unlocks" : [ "bardez_liquid_compressor" ]
+    }
+  },
+  {
+    "op" : "add",
+    "path" : "/researchTree/frackinuniversemadness/quantum_tier2/children/-",
+    "value" : "liquid_multiplier"
+  },
+  //strings
+  {
+    "op" : "add",
+    "path" : "/strings/research/liquid_multiplier",
+    "value" : [ "Quantum Liquid Multiplier", "^orange;Tier 5^reset;\n\nUsing pumps, you could theoretically suck in liquid and by using the power of quantum science, reach into the recent past to borrow some more of its former self--then push it all back out! No need to return what was borrowed, since the past has already happened!\n\nVisit your nearest ^orange;Electronics Center^reset; to craft." ]
+  },
+  //acronyms
+  {
+    "op" : "add",
+    "path" : "/acronyms/frackinuniversemadness/LIQCOMP01",
+    "value" : "liquid_multiplier"
+  },
+  //hidden research
+  {
+    "op" : "add",
+    "path" : "/hiddenResearch/frackinuniversemadness/-",
+    "value" : "LIQCOMP01"
+  }
+]
