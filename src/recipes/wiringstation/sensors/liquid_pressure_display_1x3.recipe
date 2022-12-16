@@ -2,7 +2,8 @@
   "input" : [
     { "item" : "wire", "count" : 10 },
     { "item" : "tungstenbar","count" : 3 },
-    { "item" : "electromagnet","count" : 1 }
+    { "item" : "electromagnet","count" : 1 },
+    { "item" : "siliconboard","count" : 2 }
   ],
   "output" : {
     "item" : "bardez_liquid_compression_display",
